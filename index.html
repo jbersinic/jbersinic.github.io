@@ -9,7 +9,7 @@
 
   <!-- Bring in our bootstrap stylesheet & style.css-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/Assets/static/css/style.css">
+  <link rel="stylesheet" href="style.css">
   
   <!--Embed Font-->
   <style>
@@ -32,15 +32,16 @@
 <nav class="navbar fixed-top navbar-expand-sm bg-light navbar-light sticky-top">
 
   <!-- Brand -->
-  <a class="navbar-brand text-white rounded p-2 shadow-sm bg-info">Latitude<img src= "/Assets/static/images/globe.png" style="padding: 5px;"></a>
+  <a class="navbar-brand text-white rounded p-2 shadow-sm bg-info" href="#">Latitude<img src= "globe.png" style="padding: 5px;"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
     <span class="navbar-toggler-icon"></span>
   </button>
+
   <!-- Navbar Formatting -->
   <div class="collapse navbar-collapse flex-grow-1 text-right" id="navbarSupportedContent">
   <ul class="navbar-nav ml-auto flex-nowrap">
     <li class="nav-item active">
-      <a class="nav-link active" href="/Assets/templates/index.html">Home <span class="sr-only">Wind</span></a>
+      <a class="nav-link active" href="index.html">Home <span class="sr-only">Lattitude Homework Home Page</span></a>
     </li>
     <!-- Dropdown -->
     <li class="nav-item dropdown">
@@ -48,34 +49,40 @@
         Plots
       </a>
       <div class="dropdown-menu flex-grow-1 text-center shadow">
-        <a class="dropdown-item" href="/Assets/templates/temp.html">Max Temperature</a>
-        <a class="dropdown-item" href="/Assets/templates/humid.html">Humidity</a>
-        <a class="dropdown-item" href="/Assets/templates/wind.html">Wind Speed</a>
-        <a class="dropdown-item" href="/Assets/templates/cloud.html">Cloudiness</a>
+        <a class="dropdown-item" href="temp.html">Max Temperature</a>
+        <a class="dropdown-item" href="humid.html">Humidity</a>
+        <a class="dropdown-item" href="wind.html">Wind Speed</a>
+        <a class="dropdown-item" href="cloud.html">Cloudiness</a>
       </div>
       <li class="nav-item">
-        <a class="nav-link" href="/Assets/templates/compare.html">Comparison</a>
+        <a class="nav-link" href="compare.html">Comparison</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/Assets/templates/data.html">Data</a>
+        <a class="nav-link" href="data.html">Data</a>
       </li>
     </li>
   </ul>
   </div>
 </nav>
 
+<!-- Title of Landing Page -->
+<div class="jumbotron text-center">
+  <h1>Summary: Latitude vs. X</h1>
+  <p>"There's no such thing as bad weather, just soft people." ~ Bill Bowerman</p>
+</div>
+
 <!-- Landing Page Containers -->
   <div class="container">
   <div class="row">
-    <div class="col">
-        
-      <img src="/Assets/static/images/SM_Latitude_vs_WindSpeed.png" class="float-left img-fluid" alt="Responsive image">
-      <h3>Latitude vs. Wind</h3>
+    <div class="col-md-12">
+      <img src="SM_Latitude_vs_Temperature.png" class="float-left img-fluid" alt="Responsive image">
+      <h3>Web Visualizations Project</h3>
       <hr>
-      <p>Warm air rises until it reaches a certain height at which it starts to spill over into surrounding areas.  
-          At the poles, the cold dense air sinks.  Air from the upper levels of the atmosphere flows in on top of 
-          it increasing the weight and creating an area of high pressure at the poles.</p>
-      <p>Lat & wind speed: do not look correlated, rare for windspeed to be over 20 mph.</p>
+      <p>The purpose of this project began to visualize what weather patterns existed in relation to latitude coordinates. In order to begin this visualization, 
+        we started by pulling data from OpenWeatherMap API where we assembled a dataset of over 500 cities' weather detail.</p>
+      <p>After this, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at inded: temperature, cloudiness, wind speed, and humidity. 
+        This site now provides the source sata and visualizations created as part of the analysis, as well as explanations and descriptions of any trends, findings and correlations found.
+      </p>
     </div>
    
   </div>
@@ -83,43 +90,43 @@
 
   <!-- Card content -->
     
-  <div class="container">
+    <div class="container">
     
     <div class="card-deck">
   
       <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-      <img class="card-img-top" src="/Assets/static/images/SM_Latitude_vs_Temperature.png" alt="Lat vs. Temperature">
+      <img class="card-img-top" src="SM_Latitude_vs_Temperature.png" alt="Lat vs. Temperature">
         <div class="card-body">
         <h5 class="card-title">Lat vs. Temperature </h5>
         <p class="card-text">How Does Latitude Affect Temperature?</p>
-        <a href="/Assets/templates/temp.html" class="btn btn-light">See Temperature Plot</a>
+        <a href="temp.html" class="btn btn-light">See Temperature Plot</a>
         </div>
        </div>
   
        <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-        <img class="card-img-top" src="/Assets/static/images/SM_Latitude_vs_Humidity.png" alt="Lat vs. Humidity">
+        <img class="card-img-top" src="SM_Latitude_vs_Humidity.png" alt="Lat vs. Humidity">
           <div class="card-body">
           <h5 class="card-title">Lat vs. Humidity</h5>
           <p class="card-text">How Does Latitude Affect Humidity?</p>
-          <a href="/Assets/templates/humid.html" class="btn btn-light">See Humidity Plot</a>
+          <a href="humid.html" class="btn btn-light">See Humidity Plot</a>
           </div>
         </div>
 
         <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-          <img class="card-img-top border border-info" src="/Assets/static/images/SM_Latitude_vs_WindSpeed.png" alt="Lat vs. Wind Speed">
+          <img class="card-img-top" src="SM_Latitude_vs_WindSpeed.png" alt="Lat vs. Wind Speed">
             <div class="card-body">
             <h5 class="card-title">Lat vs. Wind Speed</h5>
             <p class="card-text">How Does Latitude Affect Wind Speed?</p>
-            <a href="/Assets/templates/wind.html" class="btn btn-light">See Wind Plot</a>
+            <a href="wind.html" class="btn btn-light">See Wind Plot</a>
             </div>
           </div>
 
           <div class="card text-white bg-dark mb-3" style="width: 18rem;">
-            <img class="card-img-top" src="/Assets/static/images/SM_Latitude_vs_Cloudiness.png" alt="Lat vs. Cloudiness">
+            <img class="card-img-top" src="SM_Latitude_vs_Cloudiness.png" alt="Lat vs. Cloudiness">
               <div class="card-body">
               <h5 class="card-title">Lat vs. Cloudiness</h5>
               <p class="card-text">How Does Latitude Affect Cloudiness?</p>
-              <a href="/Assets/templates/cloud.html" class="btn btn-light">See Cloudiness Plot</a>
+              <a href="cloud.html" class="btn btn-light">See Cloudiness Plot</a>
               </div>
           </div>
   </div>
